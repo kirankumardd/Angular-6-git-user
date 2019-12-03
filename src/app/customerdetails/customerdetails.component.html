@@ -1,0 +1,12 @@
+<div class="card" *ngIf="customerDetails">
+  <div class="card-header">
+    Branch Details
+  </div>
+  <div class="card-body" *ngFor="let branch of customerDetails">
+    <h5 class="card-title">{{ branch.name }}</h5>
+    <p class="card-text">Name : {{ branch.name }}</p>
+    <p class="card-text">Default Branch : {{ branch.default_branch }}</p>
+    <p class="card-text">Branches url : {{ branch.branches_url }}</p>
+    <a (click)="goToCustomerPage()" class="btn btn-primary">Go Back</a>
+  </div>
+</div>

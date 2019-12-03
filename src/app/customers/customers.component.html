@@ -1,0 +1,18 @@
+<h2>Git User List</h2>
+
+<div class="col-md-6 centeralign">
+  <p>This Page Displays a list of git users</p>
+  <div
+    class="card centeralign addmargin"
+    style="width: 18rem;"
+    *ngFor="let customer of customers"
+  >
+    <div class="card-body" (click)="setSelectedCustomer(customer.name)">
+      <h5 class="card-title">{{ customer.login }}</h5>
+
+      <a (click)="goToDetailsPage(customer.login)" class="btn btn-primary"
+        >Click for more details</a
+      >
+    </div>
+  </div>
+</div>
